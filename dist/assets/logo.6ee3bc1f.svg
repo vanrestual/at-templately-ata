@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61.874" height="61.874" viewBox="0 0 61.874 61.874">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="61.874" height="61.874" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="templately_Color_Version.a78e7e67" data-name="templately_Color Version.a78e7e67" clip-path="url(#clip-path)">
+    <g id="templately_Color_Version.a78e7e67-2" data-name="templately_Color Version.a78e7e67" transform="translate(0 0)">
+      <circle id="Ellipse_254" data-name="Ellipse 254" cx="6.875" cy="6.875" r="6.875" transform="translate(0 48.124)" fill="#ffb45a"/>
+      <circle id="Ellipse_255" data-name="Ellipse 255" cx="6.875" cy="6.875" r="6.875" transform="translate(20.125 48.124)" fill="#ff7b8e"/>
+      <g id="Group_364" data-name="Group 364" transform="translate(0)">
+        <circle id="Ellipse_256" data-name="Ellipse 256" cx="6.875" cy="6.875" r="6.875" transform="translate(40.124 48.124)" fill="#5ac0ff"/>
+        <path id="Path_382" data-name="Path 382" d="M39.125,11.6H38A14.736,14.736,0,0,0,23.624.1a14.528,14.528,0,0,0-5.25,1v4.88H25.5v7H18.374V24.849h7.375a14.019,14.019,0,0,0-.626,1.625A7.252,7.252,0,0,1,16.99,30.85a7.346,7.346,0,0,1-5.869-6.875V12.854H8.631A14.985,14.985,0,0,0,0,26.225,14.772,14.772,0,0,0,14.749,40.974h24.5A14.689,14.689,0,0,0,39.125,11.6Z" transform="translate(0 -0.1)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

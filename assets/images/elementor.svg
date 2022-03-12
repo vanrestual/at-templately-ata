@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+  <linearGradient id="a" x1="-1636.645" x2="-1635.645" y1="-720.939" y2="-720.939" gradientTransform="scale(29.478 -29.478) rotate(45 -1687.456 1614.868)" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#312878"/>
+    <stop offset="1" stop-color="#e02c5d"/>
+  </linearGradient>
+  <path fill="url(#a)" d="M22.8,0H12v24H1.2l0,0H22.8C23.464,24,24,23.464,24,22.8V1.2C24,0.536,23.464,0,22.8,0L22.8,0z"/>
+  <linearGradient id="b" x1="-1636.645" x2="-1635.645" y1="-720.668" y2="-720.668" gradientTransform="scale(29.478 -29.478) rotate(45 -1687.456 1614.868)" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#2b2368"/>
+    <stop offset="1" stop-color="#c32651"/>
+  </linearGradient>
+  <path fill="url(#b)" d="M12,0H1.2C0.536,0,0,0.536,0,1.2v21.6C0,23.464,0.536,24,1.2,24H12V0L12,0z"/>
+  <polygon fill="#FFF" points="8.803 17.331 6.67 17.331 6.67 6.669 8.803 6.669 8.803 17.331"/>
+  <polygon fill="#DEDEDE" points="7.736 6.669 6.67 6.669 6.67 17.331 7.736 17.331 7.736 6.669"/>
+  <polygon fill="#FFF" points="17.336 17.331 10.933 17.331 10.933 15.198 17.336 15.198 17.336 17.331"/>
+  <polygon fill="#FFF" points="17.336 13.067 10.933 13.067 10.933 10.933 17.336 10.933 17.336 13.067"/>
+  <polygon fill="#FFF" points="17.336 8.797 10.933 8.797 10.933 6.664 17.336 6.664 17.336 8.797"/>
+  <polygon fill="#DEDEDE" points="14.135 15.198 10.933 15.198 10.933 17.331 14.135 17.331 14.135 15.198"/>
+  <polygon fill="#DEDEDE" points="14.135 10.933 10.933 10.933 10.933 13.067 14.135 13.067 14.135 10.933"/>
+  <polygon fill="#DEDEDE" points="14.135 6.664 10.933 6.664 10.933 8.797 14.135 8.797 14.135 6.664"/>
+</svg>

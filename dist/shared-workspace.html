@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg" />
+    <link rel="apple-touch-icon" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Templately</title>
+    <meta
+      name="description"
+      content="Get 1,000+ templates and ready Blocks to build WordPress website in few clicks. Join Templately for FREE and save ready templates in MyCloud."
+    />
+    <link rel="canonical" href="http://localhost:3000/shared-workspace.html" />
+    <meta name="theme-color" content="#6366f1" />
+    <script type="module" crossorigin src="/assets/vendor.505cb4e7.js"></script>
+    <script type="module" crossorigin src="/assets/main.b41df610.js"></script>
+    <link rel="stylesheet" href="/assets/main.559762d9.css">
+  </head>
+
+  <body
+    x-data="sidebar"
+    class="flex min-h-screen w-full items-stretch bg-white text-black antialiased dark:bg-black dark:text-white"
+  >
+    <aside
+      x-show="openSidebar"
+      aria-modal="true"
+      role="dialog"
+      class="fixed inset-0 z-40 h-full shadow-primary-500 xs:shadow-md sm:sticky sm:shadow-lg 2xl:shadow-xl"
+      style="display: none"
+    >
+      <div
+        @click="openSidebar = false"
+        x-show="openSidebar"
+        x-transition:enter="transition-opacity duration-300 ease-linear"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition-opacity duration-300 ease-linear"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        class="fixed inset-0 block bg-black/50 sm:hidden"
+        aria-hidden="true"
+        @resize.window="resizeOverlay"
+      ></div>
+      <div
+        x-show="openSidebar"
+        @resize.window="resizeWrapper"
+        x-transition:enter="transition-[margin-left,transform] duration-300 ease-in-out xs:duration-500 sm:duration-300 xl:duration-500"
+        x-transition:enter-start="-translate-x-full sm:ml-[-3.5rem] sm:translate-x-0 md:ml-[-4rem] xl:ml-[-20rem] 2xl:ml-[-24rem]"
+        x-transition:enter-end="translate-x-0 sm:ml-0"
+        x-transition:leave="transition-[margin-left,transform] duration-300 ease-in-out xs:duration-500 sm:duration-300 xl:duration-500"
+        x-transition:leave-start="translate-x-0 sm:ml-0"
+        x-transition:leave-end="-translate-x-full sm:ml-[-3.5rem] sm:translate-x-0 md:ml-[-4rem] xl:ml-[-20rem] 2xl:ml-[-24rem]"
+        id="sidebar-wrapper"
+        class="relative flex h-screen max-h-full min-h-screen w-screen shrink-0 flex-col overflow-y-auto bg-primary-500 pb-4 text-gray-50 xs:max-w-xs sm:relative sm:max-w-[3.5rem] sm:pb-2 md:max-w-[4rem] xl:max-w-xs xl:pb-4 2xl:max-w-sm 2xl:pb-6"
+      >
+        <div
+          class="relative flex min-h-[3.5rem] shrink-0 items-center justify-between space-x-3 overflow-hidden px-5 pt-4 pb-4 xs:space-x-4 xs:pl-6 sm:justify-center sm:space-x-0 sm:px-3 sm:py-1.5 md:px-4 md:py-2 xl:py-4 2xl:min-h-[4rem] 2xl:px-6 2xl:py-6"
+        >
+          <a
+            class="text-gray-100 transition-colors duration-300 hover:text-gray-50 focus:text-gray-50 focus:outline-none active:text-white"
+            href="/"
+          >
+            <span class="sr-only">Templately</span>
+            <img
+              loading="eager"
+              width="62"
+              height="62"
+              src="/assets/logo.6ee3bc1f.svg"
+              title="Logo Templately"
+              class="hidden h-8 w-auto shrink-0 sm:inline md:h-9 xl:hidden 2xl:h-10"
+              alt="Logo"
+            />
+            <img
+              loading="eager"
+              width="250"
+              height="62"
+              src="/assets/logo-label.b449dcb0.svg"
+              title="Logo with label Templately"
+              class="inline h-8 w-auto shrink-0 sm:hidden md:h-9 xl:inline 2xl:h-10"
+              alt="Logo with label"
+            />
+          </a>
+          <button
+            @click="openSidebar = false"
+            type="button"
+            class="inline-flex items-center justify-center rounded-full p-2 text-white transition-colors duration-300 hover:bg-primary-600 focus-visible:bg-primary-600 active:bg-primary-700 sm:hidden"
+          >
+            <span class="sr-only">Close Sidebar</span>
+            <svg
+              class="h-5 w-5 shrink-0"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <ul
+          class="my-3 flex grow flex-col items-center space-y-3 xs:my-4 sm:justify-center md:space-y-4 xl:items-start xl:justify-start xl:space-y-3 2xl:space-y-4"
+        >
+          <li
+            class="w-full px-4 text-sm font-bold tracking-wide sm:px-0 xl:w-full xl:px-6 xl:tracking-wide 2xl:px-8 2xl:text-base 2xl:tracking-wider"
+          >
+            <a
+              href="/"
+              class="group flex w-full items-center justify-center space-x-4 text-gray-100 opacity-60 transition duration-300 hover:text-gray-50 hover:opacity-90 focus:text-white focus:opacity-90 focus:outline-none active:text-white active:opacity-100 sm:rounded-full xl:space-x-4 2xl:space-x-6"
+            >
+              <div
+                class="inline-flex shrink-0 rounded-full bg-gradient-to-b from-secondary-300 to-primary-500 p-2 transition duration-300 group-hover:shadow-xl md:p-3 xl:p-2 2xl:p-3 2xl:group-hover:shadow-2xl"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 2xl:h-6 2xl:w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+                  />
+                </svg>
+              </div>
+              <span class="inline grow self-center sm:hidden xl:inline">My Cloud</span>
+            </a>
+          </li>
+          <li
+            class="w-full px-4 text-sm font-bold tracking-wide sm:px-0 xl:w-full xl:px-6 xl:tracking-wide 2xl:px-8 2xl:text-base 2xl:tracking-wider"
+          >
+            <a
+              href="/my-workspace.html"
+              class="group flex w-full items-center justify-center space-x-4 text-gray-100 opacity-60 transition duration-300 hover:text-gray-50 hover:opacity-90 focus:text-white focus:opacity-90 focus:outline-none active:text-white active:opacity-100 sm:rounded-full xl:space-x-4 2xl:space-x-6"
+            >
+              <div
+                class="inline-flex shrink-0 rounded-full bg-gradient-to-b from-secondary-300 to-primary-500 p-2 transition duration-300 group-hover:shadow-xl md:p-3 xl:p-2 2xl:p-3 2xl:group-hover:shadow-2xl"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 2xl:h-6 2xl:w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                  />
+                </svg>
+              </div>
+              <span class="inline grow self-center sm:hidden xl:inline">My Workspace</span>
+            </a>
+          </li>
+          <li
+            class="w-full px-4 text-sm font-bold tracking-wide sm:px-0 xl:w-full xl:px-6 xl:tracking-wide 2xl:px-8 2xl:text-base 2xl:tracking-wider"
+          >
+            <a
+              href="/shared-workspace.html"
+              class="flex w-full items-center justify-center space-x-4 text-white opacity-100 transition duration-300 focus:outline-none sm:rounded-full xl:space-x-4 2xl:space-x-6"
+            >
+              <div
+                class="inline-flex shrink-0 rounded-full bg-gradient-to-b from-secondary-300 to-primary-500 p-2 shadow-xl md:p-3 xl:p-2 2xl:p-3 2xl:shadow-2xl"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 2xl:h-6 2xl:w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+                  />
+                </svg>
+              </div>
+              <span class="inline grow self-center sm:hidden xl:inline">Shared with Me</span>
+            </a>
+          </li>
+          <li
+            class="w-full px-4 text-sm font-bold tracking-wide sm:px-0 xl:w-full xl:px-6 xl:tracking-wide 2xl:px-8 2xl:text-base 2xl:tracking-wider"
+          >
+            <a
+              href="/addons.html"
+              class="group flex w-full items-center justify-center space-x-4 text-gray-100 opacity-60 transition duration-300 hover:text-gray-50 hover:opacity-90 focus:text-white focus:opacity-90 focus:outline-none active:text-white active:opacity-100 sm:rounded-full xl:space-x-4 2xl:space-x-6"
+            >
+              <div
+                class="inline-flex shrink-0 rounded-full bg-gradient-to-b from-secondary-300 to-primary-500 p-2 transition duration-300 group-hover:shadow-xl md:p-3 xl:p-2 2xl:p-3 2xl:group-hover:shadow-2xl"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 2xl:h-6 2xl:w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+                  />
+                </svg>
+              </div>
+              <span class="inline grow self-center sm:hidden xl:inline">Add Ons</span>
+            </a>
+          </li>
+          <li
+            class="w-full px-4 text-sm font-bold tracking-wide sm:px-0 xl:w-full xl:px-6 xl:tracking-wide 2xl:px-8 2xl:text-base 2xl:tracking-wider"
+          >
+            <a
+              href="/manage-apis.html"
+              class="group flex w-full items-center justify-center space-x-4 text-gray-100 opacity-60 transition duration-300 hover:text-gray-50 hover:opacity-90 focus:text-white focus:opacity-90 focus:outline-none active:text-white active:opacity-100 sm:rounded-full xl:space-x-4 2xl:space-x-6"
+            >
+              <div
+                class="inline-flex shrink-0 rounded-full bg-gradient-to-b from-secondary-300 to-primary-500 p-2 transition duration-300 group-hover:shadow-xl md:p-3 xl:p-2 2xl:p-3 2xl:group-hover:shadow-2xl"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 2xl:h-6 2xl:w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                  />
+                </svg>
+              </div>
+              <span class="inline grow self-center sm:hidden xl:inline">Manage APIs</span>
+            </a>
+          </li>
+          <li
+            class="w-full px-4 text-sm font-bold tracking-wide sm:px-0 xl:w-full xl:px-6 xl:tracking-wide 2xl:px-8 2xl:text-base 2xl:tracking-wider"
+          >
+            <a
+              href="#"
+              class="group flex w-full items-center justify-center space-x-4 text-gray-100 opacity-60 transition duration-300 hover:text-gray-50 hover:opacity-90 focus:text-white focus:opacity-90 focus:outline-none active:text-white active:opacity-100 sm:rounded-full xl:space-x-4 2xl:space-x-6"
+            >
+              <div
+                class="inline-flex shrink-0 rounded-full bg-gradient-to-b from-secondary-300 to-primary-500 p-2 transition duration-300 group-hover:shadow-xl md:p-3 xl:p-2 2xl:p-3 2xl:group-hover:shadow-2xl"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 2xl:h-6 2xl:w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+                  />
+                </svg>
+              </div>
+              <span class="inline grow self-center sm:hidden xl:inline">Login to Member Area</span>
+            </a>
+          </li>
+        </ul>
+        <div
+          class="relative block shrink-0 space-y-3 overflow-hidden px-6 pt-4 pb-4 sm:hidden xl:block xl:px-8 2xl:space-y-4 2xl:px-10 2xl:pb-4 2xl:pt-6"
+        >
+          <span
+            class="text-sm font-semibold tracking-wide text-white 2xl:text-base 2xl:tracking-wider"
+            >My Cloud Status</span
+          >
+          <div class="h-1.5 w-full rounded-full bg-primary-400 2xl:h-2">
+            <hr class="h-1.5 w-[40%] rounded-full border-0 border-transparent bg-gray-50 2xl:h-2" />
+          </div>
+          <p class="text-xs font-medium tracking-wide text-gray-100 2xl:text-sm 2xl:tracking-wider">
+            4 of 10 items
+          </p>
+        </div>
+      </div>
+    </aside>
+    <div class="flex min-h-screen w-full grow flex-col bg-gray-50 dark:bg-gray-900">
+      <header class="w-full shrink-0">
+        <div
+          class="mx-auto flex min-h-[3.5rem] items-center justify-between px-3 xs:px-4 lg:px-6 2xl:min-h-[4rem] 2xl:px-8"
+        >
+          <button
+            @click="toggleSidebar"
+            class="inline-flex items-center justify-center rounded-full p-2 text-gray-500 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-600 focus:outline-none focus-visible:bg-gray-100 focus-visible:text-gray-600 active:bg-gray-200 active:text-gray-700 dark:text-gray-300 dark:hover:bg-black/20 dark:hover:text-gray-200 dark:focus-visible:bg-black/20 dark:focus-visible:text-gray-200 dark:active:bg-black/30 dark:active:text-gray-100 md:p-2.5 lg:-ml-2 2xl:-ml-2 2xl:p-3"
+            type="button"
+          >
+            <span class="sr-only">Sidebar Open</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 shrink-0 2xl:h-6 2xl:w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h7"
+              />
+            </svg>
+          </button>
+          <button
+            @click="toggleMode"
+            class="ml-auto inline-flex items-center justify-center rounded-full bg-gray-100 p-2 text-gray-700 transition-colors duration-300 hover:bg-gray-200 hover:text-gray-800 focus:outline-none focus-visible:bg-gray-200 focus-visible:text-gray-800 active:bg-primary-50 active:text-primary-500 dark:bg-black/30 dark:text-gray-100 dark:hover:bg-black/40 dark:hover:text-gray-50 dark:focus-visible:bg-black/40 dark:focus-visible:text-gray-50 dark:active:bg-primary-500/10 dark:active:text-primary-500 md:p-2.5 2xl:p-3"
+            type="button"
+            x-data="mode"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="system-mode"
+              class="hidden h-5 w-5 shrink-0 2xl:h-6 2xl:w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="light-mode"
+              class="hidden h-5 w-5 shrink-0 2xl:h-6 2xl:w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="dark-mode"
+              class="hidden h-5 w-5 shrink-0 2xl:h-6 2xl:w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              />
+            </svg>
+          </button>
+          <div
+            class="relative z-10 ml-2 -mr-1 inline-flex items-center md:ml-2.5 2xl:ml-3"
+            x-data="menuAccount"
+            @keydown.escape.stop="openMenuAccount = false; focusButton()"
+            @click.outside="onClickOutside($event)"
+          >
+            <button
+              type="button"
+              class="inline-flex items-center justify-center rounded-full px-1 py-px text-gray-500 transition duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-gray-50 dark:text-gray-300 dark:focus:ring-offset-gray-900"
+              @click="toggle"
+              @keyup.space.prevent="onButtonEnter"
+              @keydown.enter.prevent="onButtonEnter"
+              @keydown.up.prevent="onArrowUp"
+              @keydown.down.prevent="onArrowDown"
+              x-ref="button"
+              id="menu-button"
+              :aria-expanded="openMenuAccount.toString()"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              <span class="sr-only">Open Account Menu</span>
+              <img
+                loading="eager"
+                title="John Doe"
+                width="256"
+                height="256"
+                class="h-8 w-auto shrink-0 rounded-full md:h-9 2xl:h-11"
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt="John Doe"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="ml-px h-5 w-5 shrink-0 transition-transform duration-300 2xl:ml-1 2xl:h-6 2xl:w-6"
+                :class="openMenuAccount ? '-rotate-180' : 'rotate-0'"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <nav
+              x-show="openMenuAccount"
+              @keydown.up.prevent="onArrowUp"
+              @keydown.down.prevent="onArrowDown"
+              @keydown.tab="openMenuAccount = false"
+              @keydown.enter.prevent="openMenuAccount = false; focusButton()"
+              @keyup.space.prevent="openMenuAccount = false; focusButton()"
+              x-transition:enter="transition duration-150 ease-out"
+              x-transition:enter-start="scale-95 opacity-0"
+              x-transition:enter-end="scale-100 opacity-100"
+              x-transition:leave="transition duration-75 ease-in"
+              x-transition:leave-start="scale-100 opacity-100"
+              x-transition:leave-end="scale-95 opacity-0"
+              role="menu"
+              aria-orientation="vertical"
+              class="absolute top-10 right-0 mt-2 w-[calc(100vw-1.5rem)] origin-top-right rounded-md bg-white py-2 shadow-md shadow-black/10 ring-1 ring-black/5 focus:outline-none dark:bg-gray-800 dark:shadow-white/10 dark:ring-white/5 xs:w-48 md:mt-2.5 2xl:top-11 2xl:mt-3 2xl:w-56"
+              x-ref="menu-items"
+              aria-labelledby="menu-button"
+              tabindex="-1"
+              :aria-activedescendant="activeDescendant"
+              style="display: none"
+            >
+              <a
+                id="menu-item-0"
+                @mouseleave="activeIndex = -1"
+                :class="activeIndex === 0 ? 'bg-primary-50 text-primary-500 dark:bg-primary-500/10' : 'text-gray-500 hover:bg-gray-50 hover:text-gray-600 focus:bg-gray-50 focus:text-gray-600 active:bg-gray-100 active:text-gray-700 dark:text-gray-300 dark:hover:bg-black/20 dark:hover:text-gray-200 dark:focus:bg-black/20 dark:focus:text-gray-200 dark:active:bg-black/30 dark:active:text-gray-100'"
+                @mouseenter="activeIndex = 0"
+                @click="openMenuAccount = false; focusButton()"
+                href="http://localhost:3000/profile/"
+                class="block w-full px-4 py-2 text-left text-sm font-medium transition-colors duration-300 focus:outline-none 2xl:px-5 2xl:py-2.5 2xl:text-base"
+                role="menuitem"
+                tabindex="-1"
+                >Profile</a
+              >
+              <a
+                id="menu-item-1"
+                @mouseleave="activeIndex = -1"
+                :class="activeIndex === 1 ? 'bg-primary-50 text-primary-500 dark:bg-primary-500/10' : 'text-gray-500 hover:bg-gray-50 hover:text-gray-600 focus:bg-gray-50 focus:text-gray-600 active:bg-gray-100 active:text-gray-700 dark:text-gray-300 dark:hover:bg-black/20 dark:hover:text-gray-200 dark:focus:bg-black/20 dark:focus:text-gray-200 dark:active:bg-black/30 dark:active:text-gray-100'"
+                @mouseenter="activeIndex = 1"
+                @click="openMenuAccount = false; focusButton()"
+                href="subscriptions.html"
+                class="block w-full px-4 py-2 text-left text-sm font-medium transition-colors duration-300 focus:outline-none 2xl:px-5 2xl:py-2.5 2xl:text-base"
+                role="menuitem"
+                tabindex="-1"
+                >Subscriptions</a
+              >
+              <a
+                id="menu-item-2"
+                @mouseleave="activeIndex = -1"
+                :class="activeIndex === 2 ? 'bg-primary-50 text-primary-500 dark:bg-primary-500/10' : 'text-gray-500 hover:bg-gray-50 hover:text-gray-600 focus:bg-gray-50 focus:text-gray-600 active:bg-gray-100 active:text-gray-700 dark:text-gray-300 dark:hover:bg-black/20 dark:hover:text-gray-200 dark:focus:bg-black/20 dark:focus:text-gray-200 dark:active:bg-black/30 dark:active:text-gray-100'"
+                @mouseenter="activeIndex = 2"
+                @click="openMenuAccount = false; focusButton()"
+                href="payment-history.html"
+                class="block w-full px-4 py-2 text-left text-sm font-medium transition-colors duration-300 focus:outline-none 2xl:px-5 2xl:py-2.5 2xl:text-base"
+                role="menuitem"
+                tabindex="-1"
+                >Payment History</a
+              >
+              <a
+                id="menu-item-3"
+                @mouseleave="activeIndex = -1"
+                :class="activeIndex === 3 ? 'bg-primary-50 text-primary-500 dark:bg-primary-500/10' : 'text-gray-500 hover:bg-gray-50 hover:text-gray-600 focus:bg-gray-50 focus:text-gray-600 active:bg-gray-100 active:text-gray-700 dark:text-gray-300 dark:hover:bg-black/20 dark:hover:text-gray-200 dark:focus:bg-black/20 dark:focus:text-gray-200 dark:active:bg-black/30 dark:active:text-gray-100'"
+                @mouseenter="activeIndex = 3"
+                @click="openMenuAccount = false; focusButton()"
+                href="help.html"
+                class="block w-full px-4 py-2 text-left text-sm font-medium transition-colors duration-300 focus:outline-none 2xl:px-5 2xl:py-2.5 2xl:text-base"
+                role="menuitem"
+                tabindex="-1"
+                >Help</a
+              >
+              <form method="POST" action="#" role="none">
+                <button
+                  id="menu-item-4"
+                  @mouseleave="activeIndex = -1"
+                  :class="activeIndex === 4 ? 'bg-primary-50 text-primary-500 dark:bg-primary-500/10' : 'text-gray-500 hover:bg-gray-50 hover:text-gray-600 focus:bg-gray-50 focus:text-gray-600 active:bg-gray-100 active:text-gray-700 dark:text-gray-300 dark:hover:bg-black/20 dark:hover:text-gray-200 dark:focus:bg-black/20 dark:focus:text-gray-200 dark:active:bg-black/30 dark:active:text-gray-100'"
+                  @mouseenter="activeIndex = 4"
+                  @click="openMenuAccount = false; focusButton()"
+                  type="submit"
+                  class="block w-full px-4 py-2 text-left text-sm font-medium transition-colors duration-300 focus:outline-none 2xl:px-5 2xl:py-2.5 2xl:text-base"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Log out
+                </button>
+              </form>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="flex w-full grow flex-col" x-data="switchView">
+        <div class="flex h-full flex-col px-3 xs:px-4 lg:px-6 2xl:px-8">
+          <section
+            class="flex shrink-0 flex-col items-center justify-between pt-4 sm:flex-row 2xl:pt-6"
+          >
+            <h1
+              class="mb-4 text-center text-2xl font-bold text-gray-700 dark:text-gray-100 xs:text-3xl sm:mb-0 sm:grow sm:text-left 2xl:text-4xl"
+            >
+              Shared with Me<span class="sr-only"> | Templately</span>
+            </h1>
+            <div
+              class="flex flex-col space-y-3 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-2 lg:w-auto lg:shrink-0 2xl:space-x-3"
+            >
+              <div class="flex items-center justify-center space-x-2 2xl:space-x-3">
+                <button
+                  @click="toggleView"
+                  type="button"
+                  class="inline-flex items-center justify-center rounded-full border p-2 transition-colors duration-300 focus:outline-none 2xl:p-3"
+                  :class="view === 'grid' ? 'pointer-events-none border-primary-500 bg-primary-500 text-white  focus-visible:bg-primary-500 dark:border-primary-500 dark:bg-primary-500 dark:focus-visible:bg-primary-500' : 'border-gray-200 bg-white text-gray-500 hover:bg-gray-50 hover:text-gray-600 focus-visible:bg-gray-50 focus-visible:text-gray-600 active:border-primary-500/30 active:bg-primary-50 active:text-primary-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-black/20 dark:hover:text-gray-200 dark:focus:bg-black/20 dark:focus:text-gray-200 dark:active:bg-primary-500/10 dark:active:text-primary-500 shadow-black/10 active:shadow-primary-500/50 dark:shadow-white/10 hover:shadow-sm focus:shadow-sm 2xl:hover:shadow 2xl:focus:shadow'"
+                >
+                  <span class="sr-only">Grid View</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 shrink-0 2xl:h-6 2xl:w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  @click="toggleView"
+                  type="button"
+                  class="inline-flex items-center justify-center rounded-full border p-2 transition-colors duration-300 focus:outline-none 2xl:p-3"
+                  :class="view === 'list' ? 'pointer-events-none border-primary-500 bg-primary-500 text-white  focus-visible:bg-primary-500 dark:border-primary-500 dark:bg-primary-500 dark:focus-visible:bg-primary-500' : 'border-gray-200 bg-white text-gray-500 hover:bg-gray-50 hover:text-gray-600 focus-visible:bg-gray-50 focus-visible:text-gray-600 active:border-primary-500/30 active:bg-primary-50 active:text-primary-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-black/20 dark:hover:text-gray-200 dark:focus:bg-black/20 dark:focus:text-gray-200 dark:active:bg-primary-500/10 dark:active:text-primary-500 shadow-black/10 active:shadow-primary-500/50 dark:shadow-white/10 hover:shadow-sm focus:shadow-sm 2xl:hover:shadow 2xl:focus:shadow'"
+                >
+                  <span class="sr-only">List View</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 shrink-0 2xl:h-6 2xl:w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 10h16M4 14h16M4 18h16"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </section>
+          <section class="flex grow items-center justify-center py-4 md:py-6 2xl:py-8">
+            <div
+              class="flex w-full flex-col items-center space-y-2 rounded-xl border border-primary-200/50 bg-primary-50 py-3 px-6 text-primary-500 dark:border-primary-600/25 dark:bg-primary-500/10 xs:w-auto sm:flex-row sm:space-y-0 sm:space-x-3 sm:rounded-full 2xl:space-x-4"
+              role="alert"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-9 w-9 shrink-0 sm:h-6 sm:w-6 2xl:h-8 2xl:w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <h2
+                class="text-center text-sm font-medium tracking-wide sm:text-base 2xl:text-lg 2xl:tracking-wider"
+              >
+                You do not have any Shared Workspace
+              </h2>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="w-full shrink-0 border-t border-gray-200 dark:border-gray-700">
+        <div
+          class="mx-auto flex min-h-[3.5rem] w-full flex-col items-center justify-between space-y-3 px-3 pt-4 pb-6 xs:px-4 sm:flex-row sm:space-y-0 sm:py-2 lg:px-6 2xl:min-h-[4rem] 2xl:py-3 2xl:px-8"
+        >
+          <h3
+            class="grow text-center text-sm tracking-wide text-gray-500 dark:text-gray-400 sm:text-left 2xl:text-base 2xl:tracking-wider"
+          >
+            &copy; 2022
+            <a
+              class="font-semibold text-gray-600 transition-colors duration-300 hover:text-gray-700 hover:underline focus:text-gray-700 focus:underline focus:outline-none active:text-primary-500 dark:text-gray-200 dark:hover:text-gray-100 dark:focus:text-gray-100 dark:active:text-primary-500"
+              href="/"
+              >Templately</a
+            >.
+            <span class="block xs:inline">All rights reserved.</span>
+          </h3>
+          <button
+            @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+            type="button"
+            class="inline-flex items-center justify-center rounded-full bg-gray-100 p-2 text-gray-600 transition-colors duration-300 hover:bg-gray-200 hover:text-gray-700 focus:outline-none focus-visible:bg-gray-200 focus-visible:text-gray-700 active:bg-primary-50 active:text-primary-500 dark:bg-black/25 dark:text-gray-200 dark:hover:bg-black/40 dark:hover:text-gray-100 dark:focus-visible:bg-black/40 dark:focus-visible:text-gray-100 dark:active:bg-primary-500/10 dark:active:text-primary-500 2xl:p-3"
+          >
+            <span class="sr-only">Back To Top</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 shrink-0 2xl:h-6 2xl:w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 15l7-7 7 7"
+              />
+            </svg>
+          </button>
+        </div>
+      </footer>
+    </div>
+    
+  </body>
+</html>

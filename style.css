@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body::-webkit-scrollbar {
+    @apply w-3;
+  }
+  body::-webkit-scrollbar-track {
+    @apply bg-gray-200 dark:bg-gray-700;
+  }
+  body::-webkit-scrollbar-thumb {
+    @apply rounded-xl border-[3px] border-solid border-transparent bg-gray-500 bg-clip-content hover:bg-gray-400 dark:bg-gray-400 dark:hover:bg-gray-500;
+  }
+  body:hover::-webkit-scrollbar-thumb {
+    @apply bg-gray-500 hover:bg-gray-400 dark:bg-gray-400 dark:hover:bg-gray-500;
+  }
+}
+
+@layer components {
+  #sidebar-wrapper::-webkit-scrollbar {
+    @apply w-3;
+  }
+  #sidebar-wrapper::-webkit-scrollbar-track {
+    @apply rounded-xl;
+  }
+  #sidebar-wrapper::-webkit-scrollbar-thumb {
+    @apply rounded-xl border-[3px] border-solid border-transparent bg-clip-content;
+  }
+  #sidebar-wrapper:hover::-webkit-scrollbar-thumb {
+    @apply bg-primary-200 hover:bg-primary-300;
+  }
+  #table-api::-webkit-scrollbar {
+    @apply h-3;
+  }
+  #table-api::-webkit-scrollbar-track {
+    @apply bg-white dark:bg-gray-800;
+  }
+  #table-api::-webkit-scrollbar-thumb {
+    @apply rounded-xl border-[3px] border-solid border-transparent bg-gray-500 bg-clip-content hover:bg-gray-400 dark:bg-gray-400 dark:hover:bg-gray-500;
+  }
+  #table-api:hover::-webkit-scrollbar-thumb {
+    @apply bg-gray-500 hover:bg-gray-400 dark:bg-gray-400 dark:hover:bg-gray-500;
+  }
+}
