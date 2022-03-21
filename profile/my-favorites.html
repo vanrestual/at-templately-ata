@@ -456,7 +456,7 @@
                 :class="activeIndex === 1 ? 'bg-primary-50 text-primary-500 dark:bg-primary-500/10' : 'text-gray-500 hover:bg-gray-50 hover:text-gray-600 focus:bg-gray-50 focus:text-gray-600 active:bg-gray-100 active:text-gray-700 dark:text-gray-300 dark:hover:bg-black/20 dark:hover:text-gray-200 dark:focus:bg-black/20 dark:focus:text-gray-200 dark:active:bg-black/30 dark:active:text-gray-100'"
                 @mouseenter="activeIndex = 1"
                 @click="openMenuAccount = false; focusButton()"
-                href="subscriptions.html"
+                href="http://localhost:3000/subscriptions.html"
                 class="block w-full px-4 py-2 text-left text-sm font-medium transition-colors duration-300 focus:outline-none 2xl:px-5 2xl:py-2.5 2xl:text-base"
                 role="menuitem"
                 tabindex="-1"
@@ -468,7 +468,7 @@
                 :class="activeIndex === 2 ? 'bg-primary-50 text-primary-500 dark:bg-primary-500/10' : 'text-gray-500 hover:bg-gray-50 hover:text-gray-600 focus:bg-gray-50 focus:text-gray-600 active:bg-gray-100 active:text-gray-700 dark:text-gray-300 dark:hover:bg-black/20 dark:hover:text-gray-200 dark:focus:bg-black/20 dark:focus:text-gray-200 dark:active:bg-black/30 dark:active:text-gray-100'"
                 @mouseenter="activeIndex = 2"
                 @click="openMenuAccount = false; focusButton()"
-                href="payment-history.html"
+                href="http://localhost:3000/payment-history.html"
                 class="block w-full px-4 py-2 text-left text-sm font-medium transition-colors duration-300 focus:outline-none 2xl:px-5 2xl:py-2.5 2xl:text-base"
                 role="menuitem"
                 tabindex="-1"
@@ -480,7 +480,7 @@
                 :class="activeIndex === 3 ? 'bg-primary-50 text-primary-500 dark:bg-primary-500/10' : 'text-gray-500 hover:bg-gray-50 hover:text-gray-600 focus:bg-gray-50 focus:text-gray-600 active:bg-gray-100 active:text-gray-700 dark:text-gray-300 dark:hover:bg-black/20 dark:hover:text-gray-200 dark:focus:bg-black/20 dark:focus:text-gray-200 dark:active:bg-black/30 dark:active:text-gray-100'"
                 @mouseenter="activeIndex = 3"
                 @click="openMenuAccount = false; focusButton()"
-                href="help.html"
+                href="http://localhost:3000/help.html"
                 class="block w-full px-4 py-2 text-left text-sm font-medium transition-colors duration-300 focus:outline-none 2xl:px-5 2xl:py-2.5 2xl:text-base"
                 role="menuitem"
                 tabindex="-1"
@@ -549,13 +549,13 @@
                   @click="toggle"
                   type="button"
                   x-ref="button"
-                  class="relative w-full rounded-full border border-gray-200 bg-white py-2 pl-3 pr-12 text-sm font-semibold tracking-wide text-gray-500 transition duration-300 hover:text-gray-600 hover:shadow-sm focus:text-gray-600 focus:shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2 focus:ring-offset-gray-50 active:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:text-gray-200 dark:focus:text-gray-200 dark:focus:ring-offset-gray-900 dark:active:text-gray-100 sm:min-w-[12rem] 2xl:min-w-[14rem] 2xl:py-3 2xl:pl-4 2xl:pr-16 2xl:text-base 2xl:tracking-wider 2xl:hover:shadow 2xl:focus:shadow"
+                  class="relative w-full rounded-full border border-gray-200 bg-white py-2 pl-4 pr-12 text-sm font-semibold tracking-wide text-gray-500 transition duration-300 hover:text-gray-600 hover:shadow-sm focus:text-gray-600 focus:shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2 focus:ring-offset-gray-50 active:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:text-gray-200 dark:focus:text-gray-200 dark:focus:ring-offset-gray-900 dark:active:text-gray-100 sm:min-w-[12rem] 2xl:min-w-[14rem] 2xl:py-3 2xl:pl-6 2xl:pr-16 2xl:text-base 2xl:tracking-wider 2xl:hover:shadow 2xl:focus:shadow"
                   :aria-expanded="openListboxPrice"
                   aria-haspopup="listbox"
                   aria-labelledby="listbox-price"
                 >
                   <div class="flex items-center">
-                    <span class="grow text-sm 2xl:text-base">Price:</span>
+                    <span class="grow text-left text-sm 2xl:text-base">Price:</span>
                     <span
                       x-text="selected.label"
                       class="ml-3 block truncate rounded-full bg-secondary-500 px-3 py-1 text-xs font-bold text-white 2xl:ml-4 2xl:text-sm"
@@ -769,13 +769,13 @@
                   @click="toggle"
                   type="button"
                   x-ref="button"
-                  class="relative w-full rounded-full border border-gray-200 bg-white py-2 pl-3 pr-12 text-sm font-semibold tracking-wide text-gray-500 transition duration-300 hover:text-gray-600 hover:shadow-sm focus:text-gray-600 focus:shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-gray-50 active:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:text-gray-200 dark:focus:text-gray-200 dark:focus:ring-offset-gray-900 dark:active:text-gray-100 sm:min-w-[12rem] 2xl:min-w-[14rem] 2xl:py-3 2xl:pl-4 2xl:pr-16 2xl:text-base 2xl:tracking-wider 2xl:hover:shadow 2xl:focus:shadow"
+                  class="relative w-full rounded-full border border-gray-200 bg-white py-2 pl-4 pr-12 text-sm font-semibold tracking-wide text-gray-500 transition duration-300 hover:text-gray-600 hover:shadow-sm focus:text-gray-600 focus:shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-gray-50 active:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:text-gray-200 dark:focus:text-gray-200 dark:focus:ring-offset-gray-900 dark:active:text-gray-100 sm:min-w-[12rem] 2xl:min-w-[14rem] 2xl:py-3 2xl:pl-6 2xl:pr-16 2xl:text-base 2xl:tracking-wider 2xl:hover:shadow 2xl:focus:shadow"
                   :aria-expanded="openListboxCategory"
                   aria-haspopup="listbox"
                   aria-labelledby="listbox-category"
                 >
                   <div class="flex items-center">
-                    <span class="grow text-sm 2xl:text-base">Category:</span>
+                    <span class="grow text-left text-sm 2xl:text-base">Category:</span>
                     <span
                       x-text="selected.label"
                       class="ml-3 block truncate rounded-full bg-primary-500 px-3 py-1 text-xs font-bold text-white 2xl:ml-4 2xl:text-sm"
@@ -1110,7 +1110,7 @@
               </div>
               <div class="inline-flex items-start justify-center md:col-span-2 lg:col-span-3">
                 <div
-                  class="flex flex-col items-center space-y-2 rounded-xl border border-primary-200/50 bg-primary-50 py-3 px-6 text-primary-500 dark:border-primary-600/25 dark:bg-primary-500/10 xs:w-auto sm:flex-row sm:space-y-0 sm:space-x-3 sm:rounded-full 2xl:space-x-4"
+                  class="flex flex-col items-center space-y-2 rounded-xl border border-primary-200/50 bg-primary-50 py-3 px-6 text-primary-500 dark:border-primary-600/25 dark:bg-primary-500/10 xs:w-auto sm:flex-row sm:items-start sm:space-y-0 sm:space-x-3 sm:rounded-full lg:items-center 2xl:space-x-4"
                   role="alert"
                 >
                   <svg
@@ -1128,7 +1128,7 @@
                     />
                   </svg>
                   <h2
-                    class="text-center text-sm font-medium tracking-wide sm:text-base 2xl:text-lg 2xl:tracking-wider"
+                    class="text-center text-sm font-medium tracking-wide sm:text-left sm:text-base lg:text-center 2xl:text-lg 2xl:tracking-wider"
                   >
                     You did not mark any item as favorite. Please browse our
                     <a
